@@ -1,0 +1,135 @@
+/* allgemein */
+body {
+    background-image: url(../assets/BG.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    border-radius: 0.5em;
+    
+    }
+
+h1 {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    color: #4D3528;
+    grid-column: span 7;
+    text-align: center;
+    }
+/* settings screen */    
+#Screen1 {
+    color: #4D3528;
+    font-family:  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 0.8em;
+    text-align: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 8em;
+    justify-content: center;
+    display: grid;
+}
+#form {
+    background-color:#cc8e6a83;
+    border-radius: 0.5em;
+    margin-top: 5%;
+    width: 400px;
+    height: 250px;
+}
+fieldset {
+    margin: auto;
+    border-style: none;
+    margin-top: 5%;
+    border-radius: 0.5em;
+    background-color: white;
+    width:300px;
+    height: 70px;
+}
+legend {
+    color: #4D3528;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 0.5em;
+    width: 70%;
+    text-align: center;
+    line-height: 1.6em;
+    padding: 2%;
+
+}
+
+#start {
+    margin-top: 5%;
+    height: 30px;
+    width: 70px;
+    color: rgb(255, 255, 255);
+    background-color: #4D3528;
+    border-radius: 0.5em;
+    transform: scale(1.2);
+}
+
+#start:hover {
+    transform: scale(1);
+    transition: .3s ease;
+}
+
+/* farm simulation screen */
+#Screen2{
+    display: none;
+    color: #4D3528;
+    font-family:  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+#deck {
+    display: flex;
+    flex-direction: row;
+    border-style: solid;
+    border-radius: 0.5em;
+    height: auto;
+    width: auto;
+    padding: 10px;
+}
+#field {
+    border-radius: 0.5em;
+    background-color:  #CC8E6A;
+    height: 640px;
+    width: 900px;
+    margin-right: 10px;
+}
+#info {
+    position: absolute;
+    border-radius: 0.5em;
+    background-color: #cc8e6a83;
+    margin-left: 920px;
+    height: 620px;
+    width: 500px;
+    padding: 10px;
+}
+#storage {
+    border-radius: 0.5em;
+    background-color: white;
+    height: 200px;
+    width: 490px;
+    margin-bottom: 10px;
+}
+#market {
+    border-radius: 0.5em;
+    background-color: white;
+    height: 400px;
+    width: 490px;
+}
+p {
+    margin: 10px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.items {
+    display: flex;
+    flex-direction: row;
+}
+img {
+    height: 50px;
+    width: 50px;
+    margin: 2%;
+    transform: scale(1);
+}
+img:hover {
+    transform: scale(1.5);
+    transition: .3s ease-in-out;
+
+}

@@ -4,8 +4,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farm Simulator</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <!-- Icon für Tab - noch einfügen später -->
+    <link rel="icon" href="../assets/S-icon.png" type="image/x-icon"> 
+    <script src="../script/main.js" defer></script>
 </head>
 <body>
-    
+    <!--settings screen-->
+    <div id="Screen1"> <!--hide when clicked start-->
+        <header>
+            <h1>Farm Simulator in times of crises</h1>
+            <p>Choose your start capital and the variation of price</p>
+
+            <div id="form">
+                <fieldset class="fsAdjustment">
+                    <!--price variation-->
+                <legend>Variation of price</legend>
+                <input type="radio" name="LowPrice" id="1-3">
+                <label for="1-3">1 - 3€</label>
+                <input type="radio" name="HighPrice" id="1-5">
+                <label for="1-5">1 - 5€</label>
+                </fieldset>
+                <!--start capital-->
+                <fieldset>
+                <legend>Start capital</legend>
+                <span id="slider">
+                10€
+                <input type="range" name="Startcapital" id="startcapital" min="10" max="100" step="10"
+                value="20">
+                100€
+                </span>
+                </fieldset>
+                <button type="button" id="start">START</button>
+            </div>
+        </header>
+    </div>
+
+<!--farm simulation screen-->
+    <div id="Screen2"> <!--hide untill clicked start-->
+        <div id="deck">
+            <div id="field">
+                <!-- hier kommen die divs für die einzelnen Felder rein-->
+            </div>
+            <div id="info">
+                <div id="storage">
+                    <p>YOUR STORAGE</p>
+                    <div class="items">
+                        <!-- hier kommen die Items rein, div ist nicht sichtbar-->
+                        <img src="../assets/veggies/carrot.png" alt="carrot">
+                        <img src="../assets/veggies/eggplant.png" alt="eggplant">
+                        <img src="../assets/veggies/garlic.png" alt="garlic">
+                        <img src="../assets/veggies/salad.png" alt="salad">
+                        <img src="../assets/veggies/potato.png" alt="potato">
+                        <img src="../assets/actions/dung.png" alt="dung">
+                        <img src="../assets/actions/pesticides.png" alt="pesticides">
+                        <img src="../assets/actions/to-water.png" alt="to-water">
+                    </div>
+                    <p>CURRENT SALES PRICE FOR HARVEST</p>
+                </div>
+                <div id="market">
+                    <p>MARKETPLACE</p>
+                    <div class="items">
+                        <img src="../assets/veggies/carrot.png" alt="carrot">
+                        <img src="../assets/veggies/eggplant.png" alt="eggplant">
+                        <img src="../assets/veggies/garlic.png" alt="garlic">
+                        <img src="../assets/veggies/salad.png" alt="salad">
+                        <img src="../assets/veggies/potato.png" alt="potato">
+                        <img src="../assets/actions/dung.png" alt="dung">
+                        <img src="../assets/actions/pesticides.png" alt="pesticides">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
