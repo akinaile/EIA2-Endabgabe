@@ -88,17 +88,49 @@ legend {
     width: auto;
     padding: 10px;
 }
-#field {
+#garden {
     border-radius: 0.5em;
-    background-color:  #CC8E6A;
+    background-image: url(../assets/field.jpg);
+    background-size: cover;
     height: 640px;
     width: 900px;
     margin-right: 10px;
 }
+ 
+/* in ts erstellte divs für felder und reihen (row) und die bar */
+.row {
+    display: flex;
+    height: 90px;
+    width: 900px;
+}
+.field {
+    margin: 5px;
+    height: 65px;
+    width: 90px;
+    border: 3px solid bisque;
+    border-radius: 3px;
+    transform: scale(1);
+}
+.field:hover {
+    transform: scale(1.1);
+    transition: .3s ease-in-out;
+    background-color: #4D3528;
+}
+.state {
+    right: 0;
+    height: 35px;
+    width: 35px;
+    background-color: white;
+    border-radius: 3;
+
+}
+
+/* bis hier hin */
 #info {
     position: absolute;
     border-radius: 0.5em;
-    background-color: #cc8e6a83;
+    background-image: url(../assets/wood.jpg);
+    background-size: cover;
     margin-left: 920px;
     height: 620px;
     width: 500px;
@@ -128,9 +160,9 @@ p {
     flex-direction: row;
 }
 img {
-    height: 50px;
-    width: 50px;
-    margin: 2%;
+    height: 40px;
+    width: 40px;
+    margin: 1%;
     transform: scale(1);
 }
 img:hover {
