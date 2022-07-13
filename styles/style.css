@@ -93,7 +93,7 @@ legend {
     background-image: url(../assets/field.jpg);
     background-size: cover;
     height: 640px;
-    width: 900px;
+    width: 750px;
     margin-right: 10px;
 }
  
@@ -101,7 +101,7 @@ legend {
 .row {
     display: flex;
     height: 90px;
-    width: 900px;
+    width: 750px;
 }
 .field {
     margin: 5px;
@@ -131,7 +131,7 @@ legend {
     border-radius: 0.5em;
     background-image: url(../assets/wood.jpg);
     background-size: cover;
-    margin-left: 920px;
+    margin-left: 770px;
     height: 620px;
     width: 500px;
     padding: 10px;
@@ -140,14 +140,14 @@ legend {
     border-radius: 0.5em;
     background-color: white;
     height: 200px;
-    width: 490px;
+    width: 520px;
     margin-bottom: 10px;
 }
 #market {
     border-radius: 0.5em;
     background-color: white;
     height: 400px;
-    width: 490px;
+    width: 520px;
 }
 p {
     margin: 5px;
@@ -155,9 +155,19 @@ p {
     font-weight: bold;
 }
 
-.items {
+/*.items {
     display: flex;
     flex-direction: row;
+}*/
+.items {
+    position: relative;
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    margin: 5px;
+    padding: 10px;
+    border: 2px solid rgb(139,90,43);
+    border-radius: 5px;
 }
 img {
     height: 40px;
@@ -170,3 +180,55 @@ img:hover {
     transition: .3s ease-in-out;
 
 }
+/* boxen oben rechts für gekaufte produkte */
+.stockcounter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 25px;
+    width: 25px;
+    background-color: rgb(139,90,43);
+    color: rgba(242, 235, 235);
+    border-radius: 5px;
+    margin: -12px;
+}
+
+#capital {
+    border-radius: 0.5em;
+    background-color: #4D3528;
+    color: #f2f2f2;
+    height: 30px;
+    width: 80px;
+    margin: 5px;
+    box-shadow: 2px 2px 5px #aaaaaa;
+}
+#currentSellPrice {
+    border-radius: 0.5em;
+    background-color: #f2f2f2;
+    color: #4D3528;
+    height: 30px;
+    width: 80px;
+    margin: 5px;
+    box-shadow: 2px 2px 5px #aaaaaa;
+}
+
+/* Market Tabelle */
+#table1 {
+    margin: 1%;
+    width: 98%;
+}
+
+th {
+    text-align: left;
+    background-color: #4D3528;
+    border-radius: 00.2rem;
+    color: white;
+    font-family:  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+tr:nth-child(even) {background-color: #f2f2f2;} /* abwechselnde Tabellenfarbe */
+
+#table2 {
+    margin: 1%;
+    width: 70%;
+}
+

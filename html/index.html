@@ -7,7 +7,18 @@
     <link rel="stylesheet" href="../styles/style.css">
     <!-- Icon für Tab - noch einfügen später -->
     <link rel="icon" href="../assets/garlicgarden-icon.png" type="image/x-icon"> 
-    <script src="../script/main.js" defer></script>
+
+    <script src="../script/plant/Plant.js"></script>
+    <script src="../script/plant/Potato.js"></script>
+    <script src="../script/plant/Salad.js"></script>
+    <script src="../script/plant/Garlic.js"></script>
+    <script src="../script/plant/Eggplant.js"></script>
+    <script src="../script/plant/Carrot.js"></script>
+    <script src="../script/gamefield/Market.js"></script>
+    <script src="../script/gamefield/Field.js"></script>
+    <script src="../script/gamefield/Product.js"></script>
+    <script src="../script/main.js"></script>
+    
 </head>
 <body>
     <!--logo-->
@@ -23,13 +34,15 @@
 
             <div id="form">
                 <fieldset class="fsAdjustment">
-                    <!--price variation-->
+
+                <!--price variation-->
                 <legend>Variation of price</legend>
-                <input type="radio" name="Price" id="1-3">
+                <input type="radio" name="Price" id="1-3" value="3">
                 <label for="1-3">1 - 3€</label>
-                <input type="radio" name="Price" id="1-5">
+                <input type="radio" name="Price" id="1-5" value="5">
                 <label for="1-5">1 - 5€</label>
                 </fieldset>
+
                 <!--start capital-->
                 <fieldset>
                 <legend>Start capital</legend>
@@ -58,34 +71,110 @@
                 <div class="row" id="row5"></div>
                 <div class="row" id="row6"></div>
             </div>
+            
             <div id="info">
                 <div id="storage">
                     <p>YOUR STORAGE</p>
-                    <div class="items">
-                        <!-- hier kommen die Items rein, div ist nicht sichtbar-->
-                        <img src="../assets/veggies/carrot.png" alt="carrot">
-                        <img src="../assets/veggies/eggplant.png" alt="eggplant">
-                        <img src="../assets/veggies/garlic.png" alt="garlic">
-                        <img src="../assets/veggies/salad.png" alt="salad">
-                        <img src="../assets/veggies/potato.png" alt="potato">
-                        <img src="../assets/actions/dung.png" alt="dung">
-                        <img src="../assets/actions/pesticides.png" alt="pesticides">
-                        <img src="../assets/actions/to-water.png" alt="to-water">
-                    </div>
-                    <p>CURRENT SALES PRICE FOR HARVEST</p>
+                    <div id="capital"></div>
+                        <br>
+                        <!-- hier wird da aktuelle verfügbare kapital angezeigt-->
+
+                        <!--die icons werden angezeigt mit einem counter für anzahl bestand, 
+                            felder setezn per drag&drop-->
+                    <div class="items"><img src="../assets/veggies/salad.png" id="salad1" alt="salad"><div class="stockcounter" id="saladCounter"></div></div>
+                    <div class="items"><img src="../assets/veggies/potato.png" id="potato1" alt="potato"><div class="stockcounter" id="potatoCounter"></div></div>
+                    <div class="items"><img src="../assets/veggies/carrot.png" id="carrot1" alt="carrot"><div class="stockcounter" id="carrotCounter"></div></div>
+                    <div class="items"><img src="../assets/veggies/eggplant.png" id="eggplant1" alt="eggplant"><div class="stockcounter" id="eggplantCounter"></div></div>
+                    <div class="items"><img src="../assets/veggies/garlic.png" id="garlic1" alt="garlic"><div class="stockcounter" id="garlicCounter"></div></div>
+                    <div class="items"><img src="../assets/actions/dung.png" id="dung1" alt="dung"><div class="stockcounter" id="dungCounter"></div></div>
+                    <div class="items"><img src="../assets/actions/pesticides.png" id="pesticide1" alt="pesticide"><div class="stockcounter" id="pesticideCounter"></div></div>
+                    <div class="items"><img src="../assets/actions/to-water.png" id="water1" alt="to-water"></div> <!--water is endless-->
                 </div>
+
+                    <!-- <br>
+                    <div id="sell">
+                    <p>CURRENT MARKET PRICE</p>
+                    <div id="marketPrice"> -->
+                      <!-- hier wird der aktuelle Verkaufspreis angezeigt -->
+                    <!-- </div>
+                  </div> -->
+
                 <div id="market">
                     <p>MARKETPLACE</p>
-                    <div class="items">
-                        <img src="../assets/veggies/carrot.png" alt="carrot">
-                        <img src="../assets/veggies/eggplant.png" alt="eggplant">
-                        <img src="../assets/veggies/garlic.png" alt="garlic">
-                        <img src="../assets/veggies/salad.png" alt="salad">
-                        <img src="../assets/veggies/potato.png" alt="potato">
-                        <img src="../assets/actions/dung.png" alt="dung">
-                        <img src="../assets/actions/pesticides.png" alt="pesticides">
-                        
-                    </div>
+
+                    <!-- Tabelle -->
+                    <table id="table1">
+                        <!-- Tabelle Überschriften -->
+                        <tr>
+                            <th>Seedlings</th>
+                            <th>Buy</th>
+                            <th>Sell</th>
+                            <th>Growth-Time</th>
+                            <th>Water-Need</th>
+                            <th>Dung-Need</th>
+                        </tr>
+                        <!-- Salad -->
+                        <tr>
+                            <td><img src="../assets/veggies/salad.png" id="salad" alt="salad"></td>
+                            <td class="priceBuy">1€</td>
+                            <td class="priceSell">2€</td>
+                            <td>1,5 min</td>
+                            <td>1</td>
+                            <td>1</td> 
+                        </tr>
+                        <!-- Potato -->
+                        <tr>
+                            <td><img src="../assets/veggies/potato.png" id="potato" alt="potato"></td>
+                            <td class="priceBuy">1€</td>
+                            <td class="priceSell">2€</td>
+                            <td>2 min</td>
+                            <td>2</td>
+                            <td>1</td> 
+                        </tr>
+                        <!-- Carrot -->
+                        <tr>
+                            <td><img src="../assets/veggies/carrot.png" id="carrot" alt="carrot"></td>
+                            <td class="priceBuy">1€</td>
+                            <td class="priceSell">2€</td>
+                            <td>3 min</td>
+                            <td>3</td>
+                            <td>2</td> 
+                        </tr>
+                        <!-- Eggplant -->
+                        <tr>
+                            <td><img src="../assets/veggies/eggplant.png" id="eggplant" alt="eggplant"></td>
+                            <td class="priceBuy">1€</td>
+                            <td class="priceSell">2€</td>
+                            <td>4 min</td>
+                            <td>4</td>
+                            <td>2</td> 
+                        </tr>
+                        <!-- Garlic -->
+                        <tr>
+                            <td><img src="../assets/veggies/garlic.png" id="garlic" alt="garlic"></td>
+                            <td class="priceBuy">1€</td>
+                            <td class="priceSell">2€</td>
+                            <td>5 min</td>
+                            <td>5</td>
+                            <td>3</td> 
+                        </tr>
+                    </table>
+                    <br>
+                    <!-- Dung & Pesticide -->
+                    <table id="table2">
+                      <tr>
+                        <th>Dung</th>
+                        <th>Price</th>
+                        <th>Pesticide</th>
+                        <th>Price</th>
+                      </tr>
+                      <tr>
+                        <td><img src="../assets/actions/dung.png" id="dung" alt="dung"></td>
+                        <td class="price">1€</td>
+                        <td><img src="../assets/actions/pesticides.png" id="pesticide" alt="pesticide"></td>
+                        <td class="price">1€</td>
+                      </tr>
+                    </tabe>
                 </div>
             </div>
         </div>
