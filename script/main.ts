@@ -55,7 +55,7 @@ namespace garden {
         readData(); //nachdem das feld geladen ist, werden die daten aus dem settingsmenü (form) angewendet
         }
 
-    // Variables for formdata
+    // Variables for formdata //--> Jerome fragen
     export let priceVariation: number;
     // let variationPrice: HTMLInputElement = <HTMLInputElement>document.querySelector("input"); // Gibt nur ein Value aus, wie muss ich selektieren, dass beide Ausgegeben werden?
 

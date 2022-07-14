@@ -2,7 +2,7 @@
 var garden;
 (function (garden) {
     class Field {
-        market;
+        market; //das es an die klasse market weitergegeben werden kann
         plants;
         plant;
         growthProzss = 0;
@@ -22,15 +22,15 @@ var garden;
             setInterval(this.grow, 10000, 10); // calls grow every 10 seconds with parameter tick = 10
         }
         grow(_tick) {
-            if (this.plant == null) {
-                return; // if no plant is planted end here
+            if (this.plant == null) { // wenn keine pflanze im feld
+                return; // feld leer
             }
-            if (this.currentCareTime >= this.maxCareTime) {
-                this.resetField();
+            if (this.currentCareTime >= this.maxCareTime) { // wenn caretime nicht eingehalten wird
+                this.resetField(); // feld leer
                 return; // no caretaking -> plant dies -> field empty again
             }
             //if all condition are meeted, plant grows and the need for water and dung rises
-            if (this.waterNeed == this.waterStock && this.dungNeed == this.dungStock && !this.pestAttack) {
+            if (this.waterNeed == this.waterStock && this.dungNeed == this.dungStock && !this.pestAttack) { //wenn alle vorgaben erfüllt sind
                 if (this.plant.growthTime > this.growthProzss) { // if growthProzess is smaller tha growthTime ...
                     this.growthProzss += _tick; // ... increase growthProzess by 10
                     this.waterNeedTime += _tick; // ... increase waterNeedTime by 10

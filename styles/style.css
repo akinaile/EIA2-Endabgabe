@@ -191,6 +191,7 @@ img:hover {
     color: rgba(242, 235, 235);
     border-radius: 5px;
     margin: -12px;
+
 }
 
 #capital {
@@ -202,7 +203,7 @@ img:hover {
     margin: 5px;
     box-shadow: 2px 2px 5px #aaaaaa;
 }
-#currentSellPrice {
+/* #currentSellPrice {
     border-radius: 0.5em;
     background-color: #f2f2f2;
     color: #4D3528;
@@ -210,7 +211,7 @@ img:hover {
     width: 80px;
     margin: 5px;
     box-shadow: 2px 2px 5px #aaaaaa;
-}
+} */
 
 /* Market Tabelle */
 #table1 {
