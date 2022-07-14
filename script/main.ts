@@ -55,11 +55,13 @@ namespace garden {
         readData(); //nachdem das feld geladen ist, werden die daten aus dem settingsmenü (form) angewendet
         }
 
-    // Variables for formdata 
-    export let priceVariation: number; //export, weil die variablen bereits außerhalb der funktion existiern
+    // Variables for formdata
+    export let priceVariation: number;
+    // let variationPrice: HTMLInputElement = <HTMLInputElement>document.querySelector("input"); // Gibt nur ein Value aus, wie muss ich selektieren, dass beide Ausgegeben werden?
+
     export let capital: number;
 
-    // read formdata = für das auslesen der eigebenen Werte der settings
+    // read formdata
     function readData(): void {
         let formdata: FormData = new FormData(document.forms[0]);
 
@@ -67,15 +69,15 @@ namespace garden {
             switch (entry[0]) {
                 case "Price":
                     priceVariation = Number(entry[1]);
+                    console.log(priceVariation); //funktioniert nicht?
                     break;
                 case "Startcapital":
                     capital = Number(entry[1]);
-                    console.log(capital);
             }
         }
         // show entry in div
         let capitalDiv: HTMLDivElement = <HTMLDivElement>document.getElementById("capital");
-        capitalDiv.innerHTML = capital.toString();
+        capitalDiv.innerHTML = "TOTAL: " + capital.toString();
     }
         
     // Variables für the vegetables counters

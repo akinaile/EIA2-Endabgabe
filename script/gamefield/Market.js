@@ -1,6 +1,6 @@
 "use strict";
-var farm;
-(function (farm) {
+var garden;
+(function (garden) {
     class Market {
         totalCapital;
         seedlings; // Array - Setzlinge
@@ -56,6 +56,6 @@ var farm;
             // this.cropProducts[_productName].amount -= 1;
         }
     }
-    farm.Market = Market;
-})(farm || (farm = {}));
+    garden.Market = Market;
+})(garden || (garden = {}));
 //# sourceMappingURL=Market.js.map

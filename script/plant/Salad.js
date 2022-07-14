@@ -1,12 +1,12 @@
 "use strict";
-var farm;
-(function (farm) {
-    class Salad extends farm.Plant {
+var garden;
+(function (garden) {
+    class Salad extends garden.Plant {
         name = "Salad";
         growthTime = 90;
         waterNeed = 1;
         dungNeed = 1;
     }
-    farm.Salad = Salad;
-})(farm || (farm = {}));
+    garden.Salad = Salad;
+})(garden || (garden = {}));
 //# sourceMappingURL=Salad.js.map

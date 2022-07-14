@@ -48,22 +48,22 @@ var garden;
         }
         readData(); //nachdem das feld geladen ist, werden die daten aus dem settingsmenü (form) angewendet
     }
-    // read formdata = für das auslesen der eigebenen Werte der settings
+    // read formdata
     function readData() {
         let formdata = new FormData(document.forms[0]);
         for (let entry of formdata.entries()) {
             switch (entry[0]) {
                 case "Price":
                     garden.priceVariation = Number(entry[1]);
+                    console.log(garden.priceVariation); //funktioniert nicht?
                     break;
                 case "Startcapital":
                     garden.capital = Number(entry[1]);
-                    console.log(garden.capital);
             }
         }
         // show entry in div
         let capitalDiv = document.getElementById("capital");
-        capitalDiv.innerHTML = garden.capital.toString();
+        capitalDiv.innerHTML = "TOTAL: " + garden.capital.toString();
     }
     // Variables für the vegetables counters
     let counterSalad = 0; // die Counter sind zunächst bei 0, bis buy function durch click aktiviert wird

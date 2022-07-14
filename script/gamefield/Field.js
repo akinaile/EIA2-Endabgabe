@@ -1,6 +1,6 @@
 "use strict";
-var farm;
-(function (farm) {
+var garden;
+(function (garden) {
     class Field {
         market;
         plants;
@@ -85,6 +85,6 @@ var farm;
             this.currentCareTime = 0;
         }
     }
-    farm.Field = Field;
-})(farm || (farm = {}));
+    garden.Field = Field;
+})(garden || (garden = {}));
 //# sourceMappingURL=Field.js.map

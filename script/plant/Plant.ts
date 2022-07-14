@@ -1,4 +1,4 @@
-namespace farm {
+namespace garden {
 
     export abstract class Plant extends class Product {
 

@@ -1,6 +1,6 @@
 "use strict";
-var farm;
-(function (farm) {
+var garden;
+(function (garden) {
     class Product {
         name;
         currentPrice; // jedes Produkt hat einen Preis
@@ -17,6 +17,6 @@ var farm;
             this.currentPrice = Math.floor(Math.random() * (this.minPrice - this.maxPrice)); // ändert alle Preise auf einmal?
         }
     }
-    farm.Product = Product;
-})(farm || (farm = {}));
+    garden.Product = Product;
+})(garden || (garden = {}));
 //# sourceMappingURL=Product.js.map

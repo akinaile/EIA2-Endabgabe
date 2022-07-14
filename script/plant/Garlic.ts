@@ -1,6 +1,6 @@
-namespace farm {
+namespace gardens {
 
-    export class Garlic extends Plant {
+    export class Garlic extends class Plant {
  
     name: string = "Garlic";
     growthTime: number = 300;

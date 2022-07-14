@@ -1,4 +1,4 @@
-namespace farm {
+namespace garden {
 
     export class Market { // brauchen wir diese Klasse tatsächlich?
 
